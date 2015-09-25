@@ -17,14 +17,14 @@ coffee_draw = (p5) ->
 
 	p5.draw = () ->
 
-		x_off = p5.frameCount * 0.0005
-		y_off = x_off + 20
+		x_off = p5.frameCount * 0.0005 + 100
+		y_off = x_off + 250
 
 		x = p5.noise(x_off) * p5.width
 		y = p5.noise(y_off) * p5.height
 
 		# every 20 frames, we'll create a "bean"
-		if p5.frameCount % 8 == 0
+		if p5.frameCount % 6 == 0
 			# the new bean instance will be constructed
 			# with the current attributes of our "brush"
 
@@ -58,7 +58,7 @@ class Bean
 		@x_off = opts.x_off
 		@y_off = opts.y_off
 
-		@vel = opts.vel || 3
+		@vel = opts.vel || 5
 
 		@accel = opts.accel || -0.003
 
@@ -104,8 +104,8 @@ class Bean
 
 		# change these according to taste
 
-		s = 100
-		b = 100
+		s = 230
+		b = 180
 		a = 4
 
 		# and set the stroke
