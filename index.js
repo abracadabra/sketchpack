@@ -1,3 +1,1 @@
-var index = require("template-html!./html/index.handlebars");
-
-// module.exports = (index())({ title : "blah" });
+var main = require("coffee!./coffee/main.coffee");

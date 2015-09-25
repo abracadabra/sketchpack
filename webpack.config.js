@@ -1,14 +1,19 @@
 
 module.exports = {
 	entry : {
-		"index.html" : "./index", 
-		"main.js" : "./main"
+		"bundle.js" : "./index"
 	},
-	loaders : [
-		{ test : /\.hbs/, loader : "template-html-loader?engine=handlebars" }
-	],
+	module : {
+		loaders : [
+			// { test : /\.hbs/, loader : "handlebars-template-loader" }
+		]
+	},
 	output : {
-		path : __dirname + "/build",
+		path : __dirname + "/build/js",
 		filename : "[name]"
 	}
+	// ,
+	// node : {
+	// 	fs : "empty"
+	// }
 };
